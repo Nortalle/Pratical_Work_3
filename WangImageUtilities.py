@@ -153,7 +153,7 @@ class ImageFeatureExtractor:
                                 alt = 'alt="' + image_file + '"'
                             else:
                                 images_list.append("'" + image_file + "'")
-                        images_list = ','.join(images_list)
+                        images_list = ','.join(images_list).replace("\\", "/")
                         onclick = 'onclick="show_images([' + images_list + \
                                   '])"'
                         img = '<img ' + src + ' ' + alt + ' ' + style + ' ' + \
